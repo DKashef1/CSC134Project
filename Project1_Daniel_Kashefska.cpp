@@ -11,7 +11,7 @@ int main()
    	int choice; // To hold a selction choice.
    	
 	double multiplier; // to assign mulitpler based on user input for screen resolution
-	double score;
+	double score; // performance score
 	
 	string resolution;
 	string quality;
@@ -21,8 +21,7 @@ int main()
 			   x1920_x_1080 = 2,
 			   x2560_x_1440 = 3,
 			   x3840_x_2160 = 4;
-			   
-			   
+			
 	// Set the numeric ouput formatting.
     cout << fixed << showpoint << setprecision(2);
 	
@@ -55,12 +54,13 @@ int main()
 	  
 	//Get monitor resolution   
 	cout << "What is the resolution of your monitor?" << endl;
-	cout << "1. 1280 x 720" << endl;
-	cout << "2. 1920 x 1080" << endl;
-	cout << "3. 2560 x 1440" << endl;
-	cout << "4. 3840 x 2160" << endl;
+	cout << "        1. 1280 x 720" << endl;
+	cout << "        2. 1920 x 1080" << endl;
+	cout << "        3. 2560 x 1440" << endl;
+	cout << "        4. 3840 x 2160" << endl;
 	cout << "Please select from the options above: ";
-	cin >> choice;	
+	cin >> choice;
+	cout << endl << endl;
 	if (choice < x1280_x_720 || choice > x3840_x_2160)
       {
          cout << "Invalid Resolution menu choice. Program will terminate.";
@@ -113,5 +113,16 @@ int main()
 	{
 	quality = "Unable to Play";
 	}
+	
+	// printing the details	
+	cout << "Computer Hardware Graphics Quality Recommendation Tool" << endl << endl;
+	cout << "GPU Clock Speed: " << gpu << " MHz" << endl;
+	cout << "CPU Clock Speed: " << cpu << " MHz" << endl;
+	cout << "Number of cores: " << core << endl;
+	cout << "Monitor Resolution: " << resolution << endl;
+	cout << "Performace Score: " << score << endl;
+	cout << "Recommended Graphics Quality: " << quality << endl;
+    
+
 
 }
